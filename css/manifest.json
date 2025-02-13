@@ -1,0 +1,21 @@
+{
+  "name": "OPS Solutions Services",
+  "short_name": "OPS Solutions",
+  "description": "Empowering remote services with cutting-edge strategies. Join or contact us for professional support.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#9b87f5",
+  "theme_color": "#9b87f5",
+  "icons": [
+    {
+      "src": "assets/images/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
