@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+header {
+  background-color: #9b87f5;
+  color: white;
+  padding: 15px 20px;
+  text-align: center;
+  position: relative;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.toggle-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+}
+.toggle-container button {
+  background-color: #7e69ab;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+.toggle-container button:hover {
+  background-color: #9b87f5;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+.hero h2 {
+  font-size: 2.5rem;
+  color: #9b87f5;
+}
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #333;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+.services {
+  padding: 2rem;
+  background-color: #f1f0fb;
+}
+footer {
+  background-color: #7e69ab;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.floating-icons {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  display: flex;
+  gap: 1rem;
+  z-index: 2000;
+}
+.floating-icon {
+  background-color: #9b87f5;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.floating-icon:hover {
+  background-color: #7e69ab;
+  transform: scale(1.1);
+}
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+.modal-overlay.active {
+  display: flex;
+}
+.modal-content {
+  background-color: #7e69ab;
+  color: white;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #9b87f5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.close-modal:hover {
+  background-color: #7e69ab;
+}
+.modal-content form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.form-item {
+  flex: 1 1 45%;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.form-item.full-width {
+  flex: 1 1 100%;
+}
+.modal-content form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  border-color: #9b87f5;
+  background-color: #fff;
+  outline: none;
+}
+.modal-content form button[type="submit"] {
+  background-color: #9b87f5;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+  transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .floating-icons {
+    bottom: 20px;
+    right: 10px;
+  }
+  .floating-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .modal-content {
+    padding: 2rem;
+    max-width: 90%;
+  }
+  .modal-content form {
+    flex-direction: column;
+  }
+  .form-item {
+    flex: 1 1 100%;
+  }
+}
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+body[data-theme="dark"] header {
+  background-color: #1c1c1c;
+}
+body[data-theme="dark"] header nav a {
+  color: #e0e0e0;
+}
+body[data-theme="dark"] .hero h2 {
+  color: #bb86fc;
+}
+body[data-theme="dark"] .hero p {
+  color: #e0e0e0;
+}
+body[data-theme="dark"] .floating-icon {
+  background-color: #bb86fc;
+}
+body[data-theme="dark"] .floating-icon:hover {
+  background-color: #7e69ab;
+}
+body[data-theme="dark"] .modal-content {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+body[data-theme="dark"] .close-modal {
+  background-color: #7e69ab;
+}
+body[data-theme="dark"] .close-modal:hover {
+  background-color: #9b87f5;
+}
