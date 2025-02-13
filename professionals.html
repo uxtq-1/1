@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professionals - OPS Solutions Services</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="assets/favicon.ico">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="business-operations.html" data-en="Business Operations" data-es="Operaciones Empresariales">Business Operations</a></li>
+        <li><a href="contact-center.html" data-en="Contact Center" data-es="Centro de Contacto">Contact Center</a></li>
+        <li><a href="it-support.html" data-en="IT Support" data-es="Soporte IT">IT Support</a></li>
+        <li><a href="professionals.html" data-en="Professionals" data-es="Profesionales">Professionals</a></li>
+      </ul>
+    </nav>
+    <div class="toggle-container">
+      <button id="theme-toggle"></button>
+      <button id="language-toggle"></button>
+    </div>
+  </header>
+  <section class="hero">
+    <h2 data-en="Professionals" data-es="Profesionales">Professionals</h2>
+    <p data-en="Get expert assistance tailored to your needs." data-es="Recibe asistencia experta adaptada a tus necesidades.">Get expert assistance tailored to your needs.</p>
+    <img src="assets/images/hero-image.jpg" alt="Professionals Image" class="hero-image">
+  </section>
+  <footer>
+    <p>&copy; 2025 OPS Solutions Services. All rights reserved.</p>
+  </footer>
+  <div class="floating-icons">
+    <button class="floating-icon" data-modal="join-modal" aria-label="Join Us" tabindex="0">
+      <i class="fas fa-user-plus"></i>
+    </button>
+    <button class="floating-icon" data-modal="contact-modal" aria-label="Contact Us" tabindex="0">
+      <i class="fas fa-envelope-open-text"></i>
+    </button>
+  </div>
+  <div id="join-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="joinModalTitle">
+    <div class="modal-content">
+      <button class="close-modal" data-close aria-label="Close">&times;</button>
+      <h3 id="joinModalTitle" data-en="Join Us" data-es="Únete a Nosotros">Join Us</h3>
+      <p data-en="Fill out the form to join our team." data-es="Completa el formulario para unirte a nuestro equipo.">Fill out the form to join our team.</p>
+      <form id="join-form">
+        <div class="form-item">
+          <label for="join-name" data-en="Name" data-es="Nombre">Name</label>
+          <input type="text" id="join-name" placeholder="Enter your name" data-en-placeholder="Enter your name" data-es-placeholder="Ingresa tu nombre" required>
+        </div>
+        <div class="form-item full-width">
+          <button type="submit" id="join-submit" data-en="Submit" data-es="Enviar"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-content">
+      <button class="close-modal" data-close aria-label="Close">&times;</button>
+      <h3 id="contactModalTitle" data-en="Contact Us" data-es="Contáctenos">Contact Us</h3>
+      <p data-en="We'd love to hear from you!" data-es="¡Nos encantaría saber de ti!">We'd love to hear from you!</p>
+      <form id="contact-form">
+        <div class="form-item">
+          <label for="contact-name" data-en="Name" data-es="Nombre">Name</label>
+          <input type="text" id="contact-name" placeholder="Enter your name" data-en-placeholder="Enter your name" data-es-placeholder="Ingresa tu nombre" required>
+        </div>
+        <div class="form-item full-width">
+          <label for="contact-message" data-en="Message" data-es="Mensaje">Message</label>
+          <textarea id="contact-message" rows="4" placeholder="What would you like to say?" data-en-placeholder="What would you like to say?" data-es-placeholder="¿Qué te gustaría decir?" required></textarea>
+        </div>
+        <div class="form-item full-width">
+          <button type="submit" id="contact-submit" data-en="Send" data-es="Enviar"></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
